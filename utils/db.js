@@ -1,0 +1,15 @@
+const mongoose = require('mongoose');
+
+const urlDb = 'mongodb://127.0.0.1:27017/movies';
+
+const connect = async () => {
+    try {
+        await mongoose.connect(urlDb);
+        console.log('Connected with db successfully');
+    } catch (error) {
+        console.log('Error to connect with db');
+        console.log(error);
+    }
+};
+
+module.exports = { connect };
