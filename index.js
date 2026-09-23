@@ -6,6 +6,8 @@ connect();
 const PORT = 3000;
 const server = express();
 
+server.use(express.json());
+
 const Movie = require('./models/Movie');
 
 const router = express.Router();
